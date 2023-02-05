@@ -36,7 +36,8 @@ function validateform(){
 
     if(content==null || content==""){
 		swal({
-			text: 'Please Enter Valid Items Or You Can Edit It'
+			title: 'Please Enter Valid Item',
+			text:  'Or Now You Can Edit It'
 		})
     }else{
 		swal({
