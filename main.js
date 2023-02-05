@@ -35,9 +35,13 @@ function validateform(){
     var content = document.todoCheck.content.value;
 
     if(content==null || content==""){
-        alert("Please enter valid items or not u should edit it");
+		swal({
+			text: 'Please Enter Valid Items Or You Can Edit It'
+		})
     }else{
-		alert("Item stored in list Successfully")
+		swal({
+			text: 'Item Stored In List Successfully'
+		})
 	}
 }
 
