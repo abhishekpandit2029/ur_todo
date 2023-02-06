@@ -1,13 +1,9 @@
 /* Variables */
 :root {
   --primary: #fc5f40;
-  --business: #3a82ee;
   --personal: var(--primary);
-  --light: #251f21;
-  --grey: white;
-  --dark: #fc5f40;
-  --danger: #fc5f40;
-
+  --Dark: #251f21;
+  --light: white;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 /* End of Variables */
@@ -31,8 +27,8 @@ button {
 /* End of Resets */
 
 body {
-  background: var(--light);
-  color: var(--dark);
+  background: var(--Dark);
+  color: var(--primary);
 }
 
 section {
@@ -43,14 +39,14 @@ section {
 }
 
 h3 {
-  color: var(--dark);
+  color: var(--primary);
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 h4 {
-  color: var(--grey);
+  color: var(--light);
   font-size: 0.875rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -68,7 +64,7 @@ h4 {
 
 .greeting .title,
 .greeting .title input {
-  color: var(--dark);
+  color: var(--primary);
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -78,7 +74,7 @@ h4 {
   width: 100%;
   font-size: 1.125rem;
   padding: 1rem 1.5rem;
-  color: var(--dark);
+  color: var(--primary);
   background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
@@ -110,7 +106,7 @@ input[type="checkbox"] {
 }
 
 .create-todo .options label div {
-  color: var(--dark);
+  color: var(--primary);
   font-size: 1.125rem;
   margin-top: 1rem;
 }
@@ -159,7 +155,7 @@ input[type="checkbox"] {
 }
 
 .todo-item .todo-content input {
-  color: var(--dark);
+  color: var(--primary);
   font-size: 1.125rem;
 }
 
@@ -195,19 +191,19 @@ input[type="checkbox"] {
 }
 
 .todo-item .actions .delete {
-  background-color: var(--danger);
+  background-color: var(--primary);
 }
 
 .todo-item.done .todo-content input {
   text-decoration: line-through;
-  color: var(--grey);
+  color: var(--light);
 }
 
 .swal-button {
   padding: 7px 19px;
   border: none;
   border-radius: 2px;
-  background-color: #fc5f40;
+  background: #fc5f40;
   font-size: 12px;
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 }
@@ -215,14 +211,14 @@ input[type="checkbox"] {
 .swal-text {
   display: block;
   text-align: center;
-  color: black;
+  color: var(--Dark);
 }
 
 .swal-title {
 	font-size: large;
 	display: block;
 	text-align: center;
-	color: black;
+	color: var(--Dark);
   }
 
 @media screen and (max-width: 530px) {

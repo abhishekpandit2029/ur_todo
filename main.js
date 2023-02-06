@@ -2,7 +2,6 @@ window.addEventListener('load', () => {
 	todos = JSON.parse(localStorage.getItem('todos')) || [];
 	const nameInput = document.querySelector('#name');
 	const newTodoForm = document.querySelector('#new-todo-form');
-	const contentInput = document.todoCheck.content.value;
 	const username = localStorage.getItem('username') || '';
 
 	nameInput.value = username;
@@ -46,6 +45,7 @@ function validateform(){
 	}
 }
 
+
 function DisplayTodos () {
 	const todoList = document.querySelector('#todo-list');
 	todoList.innerHTML = "";
@@ -63,8 +63,6 @@ function DisplayTodos () {
 		const deleteButton = document.createElement('button');
 
 		input.type = 'checkbox';
-		input.checked = todo.done;
-		span.classList.add('bubble');
 
 
 		content.classList.add('todo-content');
@@ -84,23 +82,10 @@ function DisplayTodos () {
 		todoItem.appendChild(content);
 		todoItem.appendChild(actions);
 		todoList.appendChild(todoItem);
-
-		if (todo.done) {
-			todoItem.classList.add('done');
-		}
 		
 		input.addEventListener('change', (e) => {
-			todo.done = e.target.checked;
 			localStorage.setItem('todos', JSON.stringify(todos));
-
-			if (todo.done) {
-				todoItem.classList.add('done');
-			} else {
-				todoItem.classList.remove('done');
-			}
-
 			DisplayTodos()
-
 		})
 
 		edit.addEventListener('click', (e) => {
